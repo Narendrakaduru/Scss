@@ -1,0 +1,51 @@
+//variables
+$white: #fff;
+$primary-color: #3b5998;
+
+
+*{
+    box-sizing: border-box;
+}
+a{
+    color: #20B2AA;
+    text-decoration: none;
+    &:hover{
+        color: darken(hsl(221, 88%, 49%), 20%);
+    }
+}
+body{
+    background-color: #f4f4f4;
+}
+.container{
+    background-color: $white;
+    padding: 20px;
+}
+
+
+.nav-main {
+    background-color: lighten($primary-color, 50%);
+    padding: 30px;
+    margin-bottom: 20px;
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: space-around;
+
+        li{
+            display: flex;
+            background-color: $primary-color;
+            margin-right: 20px;
+
+            a{
+                color: $white !important;
+                padding: 12px 60px;
+                text-align: center;
+                &:hover{
+                    background-color: darken(hsl(221, 44%, 41%), 10%);
+                }
+            }
+        }
+    }
+}

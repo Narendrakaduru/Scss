@@ -1,5 +1,7 @@
 //variables
 $white: #fff;
+$bg-f4: #f4f4f4;
+$txt-8: #888;
 $primary-color: #3b5998;
 
 
@@ -14,7 +16,7 @@ a{
     }
 }
 body{
-    background-color: #f4f4f4;
+    background-color: $bg-f4;
 }
 .container{
     background-color: $white;
@@ -48,4 +50,26 @@ body{
             }
         }
     }
+}
+
+.card{
+    background-color: $bg-f4;
+    color: $txt-8;
+    padding: 20px;
+
+    &_name{
+        font-size: 3rem;
+        color: $primary-color;
+        text-decoration: underline 1px solid $primary-color;
+        text-decoration: overline underline 1px solid $primary-color;
+
+    }
+    &_description{
+        font-size: 0.9rem;
+
+        &-red{
+            color: red;
+        }
+    }
+    
 }

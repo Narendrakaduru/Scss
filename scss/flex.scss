@@ -1,0 +1,49 @@
+@mixin flex_box {
+    display: flex;
+    align-items: flex-start;
+    /*
+    align-items: stretch; //default align to flex box
+    align-items: flex-end; //opposite to flex-start
+    align-items: center; //center aligned to box
+
+    flex-direction: column; // default align to flex box
+    */
+}
+
+@mixin border {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.container-1, .container-2{
+    @include flex_box;
+    margin-bottom: 20px;
+}
+
+.container-1, .container-2{
+    div{
+        @include border;
+    }
+}
+
+.container-2{
+    justify-content: space-between;
+}
+.container-1{
+    .box-1{
+        flex: 2;
+        order: 2;
+    }
+    .box-2{
+        flex: 1;
+        order: 1;
+    }
+    .box-3{
+        flex: 1;
+        order: 3;
+    }
+}
+
+.box{
+    width: 30%;
+}
